@@ -1,0 +1,155 @@
+<section class="gap-adjustment">
+    <div class="top-bottom-container container">
+        <label class="head ">Top</label>
+        <div class="controls-row-wrap">
+            <div class="control-wrap top-control-wrap">
+                <label class="head ">Roll Force</label>
+                <div class="control">
+                    <label class="dark-grey label-10">NDS</label>
+                    <label class="dark-grey label-10"> ∑ </label>
+                    <label class="dark-grey label-10">DS</label>
+                    <label class="label-filler flex-05"></label>
+                </div>
+                <div class="control">
+                    <label class="light-grey label-10">{{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrOs"] | number : '1.0-3' }}</label>
+                    <label class="blue label-10"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrOs"] + gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }} </label>
+                    <label class="light-grey label-10">{{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }}</label>
+                    <label class="dark-grey flex-05">kN</label>
+                </div>
+            </div>
+            <div class="control-wrap top-control-wrap">
+                <label class="head ">Horizontal Gap</label>
+                <div class="control">
+                    <label class="dark-grey label-10">DS</label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">mm</label>
+                </div>
+                <div class="control">
+                    <label class="dark-grey label-10">NDS</label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">mm</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center-container container">
+        <div class="side-controls">
+            <label class="head "> Vertical </label>
+            <label class="head "> None Drive Side </label>
+            <div class="control-wrap side-control-wrap">
+                <label class="head ">Vertical</label>
+                <div class="control">
+                    <label class="dark-grey label-10"> Gap </label>
+                    <label class="blue label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActSrgEs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">mm</label>
+                </div>
+                <div class="control">
+                    <label class="dark-grey label-10"> EN </label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActFrEs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">kN</label>
+                </div>
+                <div class="control">
+                    <label class="dark-grey label-10"> EX </label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActFrEs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">kN</label>
+                </div>
+            </div>
+            <div class="gauge-wrapper">
+                <canvas #gauge id="gauge-left1">
+                </canvas>
+            </div>
+            <div class="gauge-wrapper">
+                <canvas #gauge id="gauge-left2">
+                </canvas>
+            </div>
+        </div>
+        <div class=" center-image ">
+        </div>
+        <div class="side-controls">
+            <label class="head "> Vertical </label>
+            <label class="head "> Drive Side </label>
+            <div class="control-wrap side-control-wrap">
+                <label class="head ">Vertical</label>
+                <div class="control">
+                    <label class="dark-grey label-10"> Gap </label>
+                    <label class="blue label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActSrgEs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">mm</label>
+                </div>
+                <div class="control">
+                    <label class="dark-grey label-10"> EN </label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActFrEs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">kN</label>
+                </div>
+                <div class="control">
+                    <label class="dark-grey label-10"> EX </label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActFrEs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10">kN</label>
+                </div>
+            </div>
+            <div class="gauge-wrapper">
+                <canvas #gauge id="gauge-right1">
+                </canvas>
+            </div>
+            <div class="gauge-wrapper">
+                <canvas #gauge id="gauge-right2">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="top-bottom-container bottom-container container ">
+        <label class="head ">Bottom</label>
+        <div class="controls-row-wrap">
+            <div class="filler-control">
+            </div>
+            <div class="control-wrap top-control-wrap">
+                <label class="head ">Roll Force</label>
+                <div class="control">
+                    <label class="dark-grey label-10">NDS</label>
+                    <label class="dark-grey label-10"> ∑ </label>
+                    <label class="dark-grey label-10">DS</label>
+                    <label class="label-filler flex-05"></label>
+                </div>
+                <div class="control">
+                    <label class="light-grey label-10"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrOs"] | number : '1.0-3' }} </label>
+                    <label class="blue label-10"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrOs"] + gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                    <label class="light-grey label-10"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey flex-05">kN</label>
+                </div>
+            </div>
+            <div class="control-wrap top-control-wrap">
+                <label class="head ">Horizontal Gap</label>
+                <div class="control">
+                    <label class="dark-grey label-10"> DS </label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10"> mm </label>
+                </div>
+                <div class="control">
+                    <label class="dark-grey label-10"> NDS </label>
+                    <label class="light-grey label-20"> {{gapMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                    <label class="dark-grey label-10"> mm </label>
+                </div>
+            </div>
+            <div class="control-wrap toggle-control">
+                <label class="head">Simulation</label>
+                <div class="control">
+                    <button (click)="onWriteTrue()" class="dark-grey label-20"> Start </button>
+                    <div class="svg-wrap">
+                        <svg height="26" width="26" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <circle [attr.fill]="gapMonitoredVars['ns=3;s=TF1.UR_STAC.AppLogic.Sim_Start'] ? 'green' : 'none'" cx="15" cy="15" r="10"
+                                stroke="black" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="control">
+                    <button (click)="onWriteFalse()" class="dark-grey label-20"> Stop </button>
+                    <div class="svg-wrap">
+                        <svg height="26" width="26" txmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <circle [attr.fill]="!gapMonitoredVars['ns=3;s=TF1.UR_STAC.AppLogic.Sim_Start'] ? 'red' : 'none'" cx="15" cy="15" r="10"
+                                stroke="black" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,302 @@
+    <section class="process-overview">
+        <div class="uf_container">
+            <label class="head ">UF</label>
+            <div class="controls-wrap controls-wrap-large top_roll_force">
+                <label class="head ">Top Roll Force</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="dark-grey label-10"> ∑ </label>
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="label-filler flex-05"></label>
+                    </div>
+                    <div class="control">
+                        <label class="light-grey label-10">{{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrOs"] | number : '1.0-3' }}</label>
+                        <label class="blue label-10"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrOs"] + poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="light-grey label-10">{{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }}</label>
+                        <label class="dark-grey flex-05">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small horizontal_gap_top">
+                <label class="head ">Horizontal Gap Top</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small vertical_ds">
+                <label class="head ">Vertical DS</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10"> Gap </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActSrgEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EN </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EX </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small vertical_nds">
+                <label class="head ">Vertical NDS</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10"> Gap </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActSrgEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EN </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EX </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-large bottom_roll_force">
+                <label class="head ">Bottom Roll Force</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="dark-grey label-10"> ∑ </label>
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="label-filler flex-05"></label>
+                    </div>
+                    <div class="control">
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrOs"] | number : '1.0-3' }} </label>
+                        <label class="blue label-10"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrOs"] + poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey flex-05">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-large horizontal_gap_bottom">
+                <label class="head ">Horizontal Gap Bottom</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10"> DS </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20"> mm </label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> NDS </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20"> mm </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- E CONTAINER -->
+
+        <div class="e_container">
+            <label class="head ">E</label>
+            <div class="controls-wrap controls-wrap-large e_container-top_roll_force">
+                <label class="head ">Top Roll Force</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="dark-grey label-10"> ∑ </label>
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="label-filler flex-05"></label>
+                    </div>
+                    <div class="control">
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HtpDis.ActFrOs"] | number : '1.0-3' }} </label>
+                        <label class="blue label-10"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HtpDis.ActFrOs"] + poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey flex-05">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small e_container-horizontal_gap_top">
+                <label class="head ">Horizontal Gap Top</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HtpDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HtpDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-large e_container-bottom_roll_force">
+                <label class="head ">Bottom Roll Force</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="dark-grey label-10"> ∑ </label>
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="label-filler flex-05"></label>
+                    </div>
+                    <div class="control">
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HboDis.ActFrOs"] | number : '1.0-3' }} </label>
+                        <label class="blue label-10"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HboDis.ActFrOs"] + poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey flex-05">kN</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="controls-wrap controls-wrap-large e_container-horizontal_gap_bottom">
+                <label class="head ">Horizontal Gap Bottom</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10"> DS </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HboDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20"> m/s </label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> NDS </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.E_H_C.AppLoop.HboDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20"> m/s </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UR_CONTAINER -->
+        <div class="ur_container">
+            <label class="head ">UR</label>
+            <div class="controls-wrap controls-wrap-large top_roll_force">
+                <label class="head ">Top Roll Force</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="dark-grey label-10"> ∑ </label>
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="label-filler flex-05"></label>
+                    </div>
+                    <div class="control">
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActFrOs"] | number : '1.0-3' }} </label>
+                        <label class="blue label-10"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActFrOs"] + poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey flex-05">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small horizontal_gap_top">
+                <label class="head ">Horizontal Gap Top</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small vertical_ds">
+                <label class="head ">Vertical DS</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10"> Gap </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_V_C.AppLoop.VdsDis.ActSrgEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EN </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_V_C.AppLoop.VdsDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EX </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_V_C.AppLoop.VdsDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-small vertical_nds">
+                <label class="head ">Vertical NDS</label>
+                <div class="controls-wrap-small-row controls-padding3">
+                    <div class="control">
+                        <label class="dark-grey label-10"> Gap </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_V_C.AppLoop.VosDis.ActSrgEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">mm</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EN </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_V_C.AppLoop.VosDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> EX </label>
+                        <label class="light-grey label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_V_C.AppLoop.VosDis.ActFrEs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-large bottom_roll_force">
+                <label class="head ">Bottom Roll Force</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10">NDS</label>
+                        <label class="dark-grey label-10"> ∑ </label>
+                        <label class="dark-grey label-10">DS</label>
+                        <label class="label-filler flex-05"></label>
+                    </div>
+                    <div class="control">
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HboDis.ActFrOs"] | number : '1.0-3' }} </label>
+                        <label class="blue label-10"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HboDis.ActFrOs"] + poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="light-grey label-10"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HboDis.ActFrDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey flex-05">kN</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-wrap controls-wrap-large horizontal_gap_bottom">
+                <label class="head ">Horizontal Gap Bottom</label>
+                <div class="controls-wrap-large-row controls-wrap-row-padding5">
+                    <div class="control">
+                        <label class="dark-grey label-10"> DS </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HboDis.ActSrgDs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20"> m/s </label>
+                    </div>
+                    <div class="control">
+                        <label class="dark-grey label-10"> NDS </label>
+                        <label class="blue label-20"> {{poMonitoredVars["ns=3;s=TF1.UR_H_C.AppLoop.HboDis.ActSrgOs"] | number : '1.0-3' }} </label>
+                        <label class="dark-grey label-20"> m/s </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

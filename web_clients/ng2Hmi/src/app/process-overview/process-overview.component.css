@@ -1,0 +1,153 @@
+/* Global */
+
+.process-overview {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 95vh;
+    background-color: #E9E9E9;
+}
+
+.process-overview > div {
+    box-shadow: 0px 0px 0.2vh 0.1vh rgba(0,0,0,0.9);
+    position: relative;
+}
+
+
+/*UF UR Container*/
+.uf_container {
+    width: 35%;
+    background: url(/images/processoverview_left.jpg) no-repeat center center;
+    margin-right: 0.6rem;
+    background-size: 100% 100%;
+}
+
+.ur_container {
+    width: 35%;
+    background: url(/images/processoverview_right.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    margin-left: 0.6rem;
+}
+
+.controls-wrap-large {
+    width: 61%;
+} 
+
+.controls-wrap-small {
+    width: 35%;
+}
+
+.controls-wrap-row-padding5 {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.controls-padding3 {
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.controls-wrap-small-row {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    border-width: 0vh 0.22vh 0.22vh 0.22vh;
+    border-style: solid
+}
+
+.controls-wrap-large-row {
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    border-width: 0vh 0.22vh 0.22vh 0.22vh;
+    border-style: solid
+}
+
+.top_roll_force {
+    top: 15%;
+    left: 19%;
+}
+
+.horizontal_gap_top {
+    top: 30%;
+    right: 2%;
+}
+
+.vertical_nds {
+    top: 42%;
+    left: 2%
+}
+
+.vertical_ds {
+    top: 42%;
+    right: 8%
+}
+
+.bottom_roll_force {
+    bottom: 18%;
+    left: 19%
+}
+
+.horizontal_gap_bottom {
+    bottom: 6%;
+    left: 19%;
+}
+
+
+/* E_Container */
+
+.e_container {
+    width: 30%;
+    background: url(/images/processoverview_center.jpg) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.e_container-top_roll_force {
+    top: 10%;
+    left: 10%;
+}
+
+.e_container-horizontal_gap_top {
+    top: 25%;
+    right: 2%;
+    width: 40%
+}
+
+.e_container-bottom_roll_force {
+    bottom: 15%;
+    left: 4%;
+    width: 70%
+}
+
+.e_container-horizontal_gap_bottom {
+    bottom: 3%;
+    left: 4%;
+    width: 70%
+}
+
+/*position absolute raus nehmen*/
+/* Shared */
+
+.controls-wrap {
+    background: rgba(148,148,148, 0.5);
+    box-shadow: 0.16rem 0.16rem 0.5rem 0rem rgba(0,0,0,0.5);
+    justify-content: center;
+    position: absolute;
+  }
+
+  @media (max-width: 1100px) {
+  .process-overview 
+  { 
+    height: 92vh;
+  }
+}
+
+
+
+/*Colors 
+    light-grey
+    background: linear-gradient(#9D9D9D, #E9E9E9, #9D9D9D);
+    border-color: #646464
+
+    blue-label
+    background: #1D68DB;
+    border-color:#2D476C;
+*/
