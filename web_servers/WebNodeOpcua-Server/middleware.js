@@ -134,9 +134,10 @@ async.series([
             // Start subscription
             socket.on('StartSubscription', function (view) {
 
+                // check if subscription is already running for that view? or if subscription is running for variables?
+
                 console.log("subscription started");
 
-                // check if subscription is already running for that view? or if subscription is running for variables?
                 processOverviewNodeIDs.forEach(function (id) {
                     var nodeID = id;
 
@@ -157,9 +158,7 @@ async.series([
                         });
 
                     monitoredItem.on("changed", function (dataValue) {
-
                         console.log("SUBSCRIPTION: ".cyan + id.cyan + " has changed " + dataValue.toString());
-
                         if (io != null) {
                             io.sockets.emit('NewData', {
                                 value: dataValue.value.value,
@@ -177,7 +176,6 @@ async.series([
             });
 
         });
-
 
 
     }

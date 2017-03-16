@@ -11,7 +11,6 @@ var argv = require('yargs')
 
 var express = require("express");
 var appPort = 3700;
-
 var opcua = require("node-opcua");
 var async = require("async");
 var color = require("colors");
@@ -46,7 +45,6 @@ var app = express();
 
 // start HttpServer
 (function () {
-
     app.use(express.static(path.join(__dirname, '../../web_clients/ng2Hmi/dist')));
 
     // app.all('/*', function (req, res) {
@@ -55,7 +53,6 @@ var app = express();
 
     io = require('socket.io').listen(app.listen(appPort));
     console.log("Listening on port " + appPort);
-
 })();
 
 
@@ -217,8 +214,4 @@ function startSubscription() {
         });
     });
 }
-
-
 // all in async series?
-
-

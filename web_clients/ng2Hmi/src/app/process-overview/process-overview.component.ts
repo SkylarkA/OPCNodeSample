@@ -30,7 +30,6 @@ export class ProcessOverviewComponent implements OnInit {
       "ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActFrEs" : 0,
       "ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActSrgEs" : 0,
 
-  
       "ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActFrOs": 0,
       "ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActFrDs" : 0,
       "ns=3;s=TF1.UR_H_C.AppLoop.HtpDis.ActSrgDs" : 0,
