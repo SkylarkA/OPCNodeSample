@@ -28,28 +28,17 @@ export class GapAdjustmentComponent implements AfterViewInit {
   private gapMonitoredVars: Object;
 
   constructor(private dataService: DataService) {
-    this.gapMonitoredVars = {
-      "ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrOs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrDs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActSrgDs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActSrgOs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrOs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrDs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActSrgDs": 0,
-      "ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActSrgOs": 0,
-      "ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActFrEs": 0,
-      "ns=3;s=TF1.UF_V_C.AppLoop.VosDis.ActSrgEs": 0,
-      "ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActFrEs": 0,
-      "ns=3;s=TF1.UF_V_C.AppLoop.VdsDis.ActSrgEs": 0,
-      "ns=3;s=TF1.UR_STAC.AppLogic.Sim_Start": false
-    }
+    // setup our nodeId list and get the latest values
+    this.dataService.nodeIdListLatestValues
+      .subscribe(data => {
+        this.gapMonitoredVars = data;
+      })
+    this.dataService.switchView("Gap_Adjustment");
   }
 
-
   ngAfterViewInit() {
-    //this.dataService.getLatestVarValues("Gap_Adjustment");
-    //this.dataService.startSubscription("Gap_Adjustment");
-
+    // TODO: simplify gauges init
+    // Init Gauges
     var gaugeLeft1 = new cGauges.LinearGauge({
       renderTo: 'gauge-left1',
       colorPlate: 'transparent',
@@ -107,7 +96,6 @@ export class GapAdjustmentComponent implements AfterViewInit {
       height: this.getParentHeight('gauge-left1'),
       //width: this.getParentwidth('gauge-left1'),
     }).draw();
-
 
     var gaugeLeft2 = new cGauges.LinearGauge({
       renderTo: 'gauge-left2',
@@ -225,7 +213,6 @@ export class GapAdjustmentComponent implements AfterViewInit {
       //width: this.getParentwidth('gauge-left2'),
     }).draw();
 
-
     var gaugeRight2 = new cGauges.LinearGauge({
       renderTo: 'gauge-right2',
       colorPlate: 'transparent',
@@ -284,9 +271,7 @@ export class GapAdjustmentComponent implements AfterViewInit {
       height: this.getParentHeight('gauge-right2'),
       //width: this.getParentwidth('gauge-left2'),
     }).draw();
-
-
-    this.dataService.getLatestVarValues("Gap_Adjustment");
+    // End Init Gauges
 
     this.dataService.newData
       .subscribe(data => {
@@ -306,15 +291,11 @@ export class GapAdjustmentComponent implements AfterViewInit {
             break;
         }
       });
-    console.log(this.gapMonitoredVars['ns=3;s=TF1.UF_H_C.AppLoop.HtpDis.ActFrOs'])
 
 
-    console.log(this.gapMonitoredVars['ns=3;s=TF1.UF_H_C.AppLoop.HboDis.ActFrDs']);
-
+    this.dataService.startSubscription("Gap_Adjustment");
+    console.log("Setup GapAdjustment complete")
   }
-
-
-
 
   getParentHeight(gaugeId) {
     return this.gauges.find(element => gaugeId == element.nativeElement.getAttribute('id')).nativeElement.parentNode.offsetHeight;

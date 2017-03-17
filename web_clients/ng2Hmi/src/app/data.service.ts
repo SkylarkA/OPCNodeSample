@@ -8,36 +8,42 @@ import * as io from 'socket.io-client';
 
 @Injectable()
 export class DataService {
-  //private middlewareUrl: string = "http://localhost:3700/";
-  private middlewareUrl: string = window.location.toString();
+  private middlewareUrl: string = "http://localhost:3700/";
+  //private middlewareUrl: string = window.location.toString();
 
   private socket: SocketIOClient.Socket;
   private initial: Data = new Data();
   private lastView: string;
 
+  nodeIdListLatestValues = new BehaviorSubject<Data>(this.initial);
   newData: Subject<Data> = new BehaviorSubject<Data>(this.initial);
+
 
   constructor() {
     this.socket = io.connect(this.middlewareUrl);
 
-    console.log( "location path : " + this.middlewareUrl);
+    console.log("location path : " + this.middlewareUrl);
 
     this.socket.on('connect', () => {
       console.log('socket connected');
-      this.getLatestVarValues(this.lastView); // get the the latest Values for when server disconnected but page wasnt refreshed
+      this.switchView(this.lastView); // get the the latest Values for when server disconnected but page wasnt refreshed
     });
- 
+
     this.socket.on('disconnect', () => {
       console.log('disconnected');
     });
 
-    this.socket.on(NotificationEvent[NotificationEvent.NewData], (msg) => {
-      this.newData.next(new Data(msg));
+    this.socket.on(NotificationEvent[NotificationEvent.NewData], (list) => {
+      this.newData.next(JSON.parse(list));
+    });
+
+    this.socket.on(NotificationEvent[NotificationEvent.IdListLatestValues], (msg) => {
+      this.nodeIdListLatestValues.next(new Data(msg));
     });
   }
 
-  getLatestVarValues(view) {
-    this.socket.emit('LatestValues', view);
+  switchView(view) {
+    this.socket.emit('getViewNodeIds', view, );
     this.lastView = view;
   }
 
